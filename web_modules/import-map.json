@@ -1,0 +1,13 @@
+{
+  "imports": {
+    "@fullcalendar/bootstrap": "./@fullcalendar/bootstrap.js",
+    "@fullcalendar/core": "./@fullcalendar/core.js",
+    "@fullcalendar/daygrid": "./@fullcalendar/daygrid.js",
+    "@fullcalendar/interaction": "./@fullcalendar/interaction.js",
+    "@fullcalendar/timegrid": "./@fullcalendar/timegrid.js",
+    "firebase": "./firebase.js",
+    "pdfmake": "./pdfmake.js",
+    "popper": "./popper.js",
+    "sweetalert2": "./sweetalert2.js"
+  }
+}

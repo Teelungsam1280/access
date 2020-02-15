@@ -1,0 +1,5 @@
+**/*.min.js
+**/src/*
+**/dist/*
+**/build/npm
+ad.js
