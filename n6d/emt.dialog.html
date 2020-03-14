@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.12.0/css/mdb.min.css" rel="stylesheet">
+    <script>
+      function ignoreact(ignoreact) {
+        alert(ignoreact)
+      }
+      function widi(trapnametc, traptype, actionurl, ignoreid) {
+        if ('content' in document.createElement('template')) {
+
+          // Instantiate the table with the existing HTML tbody
+          // and the row with the template
+          var template = document.querySelector('#element_temp');
+          // Clone the new row and insert it into the table
+          var tbody = document.querySelector("main");
+          var clone = template.content.cloneNode(true);
+          var h4 = clone.querySelectorAll("h4");
+          var p = clone.querySelectorAll("p");
+          var a = clone.querySelectorAll("a");
+          var button = clone.querySelectorAll("button");
+
+
+          h4[ 0 ].textContent = traptype;
+          p[ 0 ].textContent = "Trap " + trapnametc + " Needs " + traptype;
+          a[ 0 ].href = actionurl;
+          a[ 2 ].href = "javascript:alert('" + ignoreid + "')";
+
+
+
+
+          //td[ 1 ].textContent = "Stuff";
+
+          tbody.appendChild(clone);
+
+
+        } else {
+          // Find another way to add the rows to the table because 
+          // the HTML template element is not supported.
+          alert()
+        }
+      }
+      window.onload = function() {
+        setInterval(() => {
+                              window.scrollTo(100, 0);
+
+                    widi("trapname", "traptype", "#", "ignore");
+                    
+
+        }, 1);
+}
+        // Test to see if the browser supports the HTML template element by checking
+          // for the presence of the template element's content attribute.
+
+    </script>
+  </head>
+  <body>
+    <template id="element_temp" style="display: block;">
+      <div class="card" style="max-width:500px;margin:10px;height:520px;  overflow-y: hidden;width:100%; display:inline-block;">
+    
+        <!-- Card image -->
+        <div class="view overlay">
+          <img class="card-img-top" src="/emtgo.jpg" alt="Card image cap">
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+    
+        <!-- Card content -->
+        <div class="card-body"
+          style="z-index:999999999999999999999999999999999999999999999999999999999; position:absolute; background-color:white;width:499px;">
+    
+          <!-- Title -->
+    
+          <h4 class="card-title">Action Required</h4>
+          <!-- Text -->
+          <p class="card-text">Here are some shops where you can buy our products
+          </p>
+          <!-- Button -->
+          <div class="btn-group" role="group" aria-label="Basic example">
+    
+            <a href="#" type="button" class="btn btn-primary" id="clickme">Take Action</a>
+            <a type="button" class="btn btn-primary">Ignore</a>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+    </template>
+    <main>
+<!-- Card -->
+
+</main>
+<!-- Card -->  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.12.0/js/mdb.min.js"></script>
+  
+  </body>
+</html>

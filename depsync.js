@@ -1,8 +1,16 @@
 // LOADS DEPS
 // This is the "Offline copy of pages" service worker
-
+let t;
 // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+   function resetTimer() {
+     Swal.close();
+     clearTimeout(t);
+     t = "";
+     t = setTimeout(disconnectalert, 30000); // time is in milliseconds (1000 is 1 second)
 
+     t = setTimeout(logout, 60000);
+     t = setTimeout(meteor, 60010);
+   }
 // Check compatibility for the browser we're running this in
 if ("serviceWorker" in navigator) {
   if (navigator.serviceWorker.controller) {
@@ -198,7 +206,6 @@ function offline() {
 }
 window.addEventListener('offline', offline);
   function idleTimer() {
-    var t;
   //window.onload = resetTimer;
   window.onmousemove = resetTimer; // catches mouse movements
   window.onmousedown = resetTimer; // catches mouse movements
@@ -238,13 +245,6 @@ function meteor() {
   window.location.href = "/pages/examples/lockscreen.html"; //Adapt to actual logout script
 }
 
-   function resetTimer() {
-    clearTimeout(t);
-     t = setTimeout(disconnectalert, 30000);  // time is in milliseconds (1000 is 1 second)
 
-  t = setTimeout(logout, 60000);
-  t = setTimeout(meteor, 62000);
-
-}
 }
 idleTimer();
